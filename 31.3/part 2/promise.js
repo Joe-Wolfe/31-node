@@ -47,8 +47,7 @@ async function question1() {
 async function question2() {
     let deck = new Deck()
     await deck.newDeck()
-    await deck.drawCard()
-    await deck.drawCard()
+    await Promise.all([deck.drawCard(), deck.drawCard()])
 }
 
 async function question3() {
